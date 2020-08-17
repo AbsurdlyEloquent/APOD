@@ -1,0 +1,42 @@
+* {
+  box-sizing:border-box;
+}
+body {
+  background-image: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  background-repeat: no-repeat;
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} h1{
+  color: #A17AAD;
+}
+main{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  margin: 2% 5% 2% 5%;
+} .astroBox {
+  height: 30vh;
+  width: 20vw;
+  border: 1px solid black;
+  border-radius: 5%;
+  box-shadow: 4px 4px 10px 2px black;
+  animation: fadeIn ease 2s, slideUp ease 2s;
+  background: #A17AAD;
+  margin: 5%;
+}
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+@keyframes slideUp {
+  0% {transform: translateY(10px);}
+  100% {transform: translateY(0px);}
+}
