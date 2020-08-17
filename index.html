@@ -8,7 +8,12 @@
   <body>
     <header>
       <nav>
-
+        <ul>
+          <li><a id="today" href="https://example.com">Today</a></li>
+          <li><a href="https://apod.nasa.gov">APOD</a></li>
+          <li><a href="https://github.com/AbsurdlyEloquent/APOD">Source</a></li>
+          <li><button onclick="topFunction()" id="topBtn">^Top^</button></li>
+        </ul>
       </nav>
       <h1>Amazing Spectacular Astronomy Photos!</h1>
       <form class="searchbar" action="index.html" method="post">
@@ -16,9 +21,8 @@
         <input type="submit" name="" value="Search">
       </form>
     </header>
-    <main id="main">
-
-    </main>
+    <main id="main"></main>
+    <button onclick="loadMore()" id="loadMore">Load More Content</button>
     <script src="./script.js" charset="utf-8"></script>
   </body>
 </html>

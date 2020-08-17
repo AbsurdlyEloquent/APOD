@@ -1,5 +1,6 @@
 * {
   box-sizing:border-box;
+  scroll-behavior: smooth;
 }
 body {
   background-image: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
@@ -12,16 +13,41 @@ body {
   flex-direction: column;
 }
 header {
+  position: fixed;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-} h1{
+  background-color: black;
+  border-bottom: 1px solid white;
+} ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+} h1 {
   color: #A17AAD;
+} li {
+  color: white;
+  text-decoration: none;
+  margin: auto 10%;
+  font-size: 20px;
+} a {
+  text-decoration: none;
+  color: white;
+} #today {
+  background: none;
+  font-size: 100%;
+  font-family: inherit;
+  border: 0;
+  padding: 0;
+  color: white;
+} form {
+  margin: auto 3%;
 }
 main{
   display: grid;
   grid-template-columns: repeat(4,1fr);
-  margin: 2% 5% 2% 5%;
+  margin: 7% 5% 2% 5%;
 } .astroBox {
   height: 30vh;
   width: 20vw;
@@ -31,6 +57,12 @@ main{
   animation: fadeIn ease 2s, slideUp ease 2s;
   background: #A17AAD;
   margin: 5%;
+} #loadMore {
+  margin: auto 30% 5% 30%;
+  background-color:#A17AAD;
+  padding: 1%;
+  color: white;
+  font-size: 20px;
 }
 @keyframes fadeIn {
   0% {opacity:0;}
