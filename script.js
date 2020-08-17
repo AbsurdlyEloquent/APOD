@@ -1,10 +1,23 @@
 
 let main = document.querySelector("#main")
 let loadBtn = document.querySelector("#loadMore")
+let todayBtn = document.querySelector("#today")
 //this is my query key for the API
 let key = 'Nia1HkochaeWxNpytF7y19ifKy2FEEPMvUwsgR75'
 let modal = null;
 
+todayBtn.addEventListener('click', (e)=>{
+  e.preventDefault()
+  fetch(`https://api.nasa.gov/planetary/apod?api_key=${key}`)
+    .then(returned => returned.json())
+    .then(returned => {
+      if (returned.code === "400" || returned.code === "404") {
+        console.err("the request was unsuccseful")
+    } else {
+      modal = new Modal(returned)
+    }
+  })
+})
 //This is a class that generates the content
 class Generator {
   constructor() {
@@ -94,6 +107,9 @@ class Modal {
     this.raw = obj
 
     this.modal.style.display = 'flex'
-    this.content.children[0].children[0].innerText = this.raw.title
+    this.content.children[0].children[0].innerText = this.raw.title;
+    this.content.children[1].src= this.raw.url;
+    this.content.children[2].innerText = this.raw.explanation;
+
   }
 }
