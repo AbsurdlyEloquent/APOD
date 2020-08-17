@@ -34,7 +34,7 @@ header {
 } a {
   text-decoration: none;
   color: white;
-} #today {
+} #topBtn {
   background: none;
   font-size: 100%;
   font-family: inherit;
@@ -58,8 +58,10 @@ main{
   background: #A17AAD;
   margin: 5%;
 } #loadMore {
+  display: none;
   margin: auto 30% 5% 30%;
   background-color:#A17AAD;
+  border-radius: 10%;
   padding: 1%;
   color: white;
   font-size: 20px;
