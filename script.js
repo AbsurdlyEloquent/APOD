@@ -3,7 +3,7 @@ let main = document.querySelector("#main")
 let loadBtn = document.querySelector("#loadMore")
 //this is my query key for the API
 let key = 'Nia1HkochaeWxNpytF7y19ifKy2FEEPMvUwsgR75'
-
+let modal = null;
 
 //This is a class that generates the content
 class Generator {
@@ -41,6 +41,7 @@ class Generator {
       newDiv.classList.add('astroBox')
       this.sections.push(newDiv)
       this.assignContent(newDiv)
+      newDiv.addEventListener('click', ()=>{modal=new Modal(newDiv)})
     }, 250*i)
   }
   loadMore() {
@@ -78,4 +79,21 @@ let content = new Generator
 function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
+}
+//this deletes the modal when the 'X' is clicked
+function deleteModal() {
+  modal.modal.style.display = 'none';
+  modal = null;
+
+}
+
+class Modal {
+  constructor(obj) {
+    this.modal = document.querySelector('#modal')
+    this.content = document.querySelector('.modalContent')
+    this.raw = obj
+
+    this.modal.style.display = 'flex'
+    this.content.children[0].children[0].innerText = this.raw.title
+  }
 }

@@ -9,10 +9,18 @@
     <header>
       <nav>
         <ul>
-          <li><a id="today" href="https://example.com">Today</a></li>
-          <li><a href="https://apod.nasa.gov">APOD</a></li>
-          <li><a href="https://github.com/AbsurdlyEloquent/APOD">Source</a></li>
-          <li><button onclick="topFunction()" id="topBtn">^Top^</button></li>
+          <li>
+            <a id="today" href="https://example.com">Today</a>
+          </li>
+          <li>
+            <a href="https://apod.nasa.gov">APOD</a>
+          </li>
+          <li>
+            <a href="https://github.com/AbsurdlyEloquent/APOD">Source</a>
+          </li>
+          <li>
+            <button onclick="topFunction()" id="topBtn">^Top^</button>
+          </li>
         </ul>
       </nav>
       <h1>Amazing Spectacular Astronomy Photos!</h1>
@@ -24,10 +32,12 @@
     <main id="main"></main>
     <div id="modal">
       <div class="modalContent">
-        <h3></h3>
-        <span>&times;</span>
+        <div class="modalHeader">
+          <h3></h3>
+          <span onclick="deleteModal()">&times;</span>
+        </div>
         <figure>
-          <img src="" alt="" />
+          <img src="" alt=""/>
           <figcaption></figcaption>
         </figure>
         <p></p>
