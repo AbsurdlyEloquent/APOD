@@ -55,7 +55,9 @@ main{
   border-radius: 5%;
   box-shadow: 4px 4px 10px 2px black;
   animation: fadeIn ease 2s, slideUp ease 2s;
-  background: #A17AAD;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
   margin: 5%;
 } #loadMore {
   display: none;

@@ -22,7 +22,18 @@
       </form>
     </header>
     <main id="main"></main>
-    <button onclick="loading()" id="loadMore">Load More Content</button>
+    <div id="modal">
+      <div class="modalContent">
+        <h3></h3>
+        <span>&times;</span>
+        <figure>
+          <img src="" alt="" />
+          <figcaption></figcaption>
+        </figure>
+        <p></p>
+      </div>
+    </div>
+    <button onclick="content.loadMore()" id="loadMore">Load More Content</button>
     <script src="./script.js" charset="utf-8"></script>
   </body>
 </html>
