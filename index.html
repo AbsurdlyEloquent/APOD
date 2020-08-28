@@ -1,47 +1,51 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1" name="viewport"/>
-    <title>Daily Astronomy Photos</title>
-    <link rel="stylesheet" href="./style.css">
-  </head>
-  <body>
-    <header>
-      <nav>
-        <ul>
-          <li>
-            <a id="today" href="">Today</a>
-          </li>
-          <li>
-            <a href="https://apod.nasa.gov">APOD</a>
-          </li>
-          <li>
-            <a href="https://github.com/AbsurdlyEloquent/APOD">Source</a>
-          </li>
-          <li>
-            <button onclick="topFunction()" id="topBtn">^Top^</button>
-          </li>
-        </ul>
-      </nav>
-      <h1>Amazing Spectacular Astronomy Photos!</h1>
-      <form class="searchbar" action="index.html" method="post">
-        <input type="text" name="" placeholder="search keywords">
-        <input type="submit" name="" value="Search">
-      </form>
-    </header>
-    <main id="main"></main>
-    <div id="modal">
-      <div class="modalContent">
-        <div class="modalHeader">
-          <h3></h3>
-          <span onclick="deleteModal()">&times;</span>
-        </div>
-        <img src="" alt=""/>
-        <p></p>
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>Daily Astronomy Photos</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="./favicon.ico" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li>
+          <a id="today" href="">Today</a>
+        </li>
+        <li>
+          <a href="https://apod.nasa.gov">APOD</a>
+        </li>
+        <li>
+          <a href="https://github.com/AbsurdlyEloquent/APOD">Source</a>
+        </li>
+        <li>
+          <button onclick="topFunction()" id="topBtn">^Top^</button>
+        </li>
+      </ul>
+    </nav>
+    <h1>Amazing Spectacular Astronomy Photos!</h1>
+    <form class="searchbar" action="index.html" method="post">
+      <input type="text" name="" placeholder="search keywords">
+      <input type="submit" name="" value="Search">
+    </form>
+  </header>
+  <main id="main"></main>
+  <div id="modal">
+    <div class="modalContent">
+      <div class="modalHeader">
+        <h3></h3>
+        <span onclick="deleteModal()">&times;</span>
       </div>
+      <img src="" alt="" />
+      <p></p>
     </div>
-    <button onclick="content.loadMore()" id="loadMore">Load More Content</button>
-    <script src="./script.js" charset="utf-8"></script>
-  </body>
+  </div>
+  <button onclick="content.loadMore()" id="loadMore">Load More Content</button>
+  <script src="./script.js" charset="utf-8"></script>
+</body>
+
 </html>
