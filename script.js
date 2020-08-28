@@ -6,6 +6,7 @@ let todayBtn = document.querySelector("#today")
 let key = 'Nia1HkochaeWxNpytF7y19ifKy2FEEPMvUwsgR75'
 let modal = null;
 
+//makes a modal for today's entry
 todayBtn.addEventListener('click', (e)=>{
   e.preventDefault()
   fetch(`https://api.nasa.gov/planetary/apod?api_key=${key}`)
